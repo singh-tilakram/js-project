@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Integer or String</title>
+  </head>
+  <body>
+    <h2>Check If Input is an Integer or a String</h2>
+    <input type="text" id="userInput" placeholder="Enter a value" />
+    <button onclick="checkInt()">Check</button>
+    <p id="result"></p>
+
+    <script>
+      function checkInt() {
+        let input = document.getElementById("userInput").value;
+        let num = Number(input); // Convert input to number
+
+        if (num % 1 === 0) {
+          document.getElementById("result").innerText = "It is integer";
+        } else if (input === "string") {
+          document.getElementById("result").innerText = "This is string value";
+        } else {
+          document.getElementById("result").innerText = "Not a integer";
+        }
+      }
+    </script>
+  </body>
+</html>

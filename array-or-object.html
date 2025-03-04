@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Array or Object</title>
+  </head>
+  <body>
+    <h2>Check If Input is an Array or Object</h2>
+    <button onclick="checkArrayObject()">Check</button>
+    <p id="result"></p>
+
+    <script>
+      function checkArrayObject() {
+        let values = []; // Using an empty array as in your original code
+        let check = Array.isArray(values);
+
+        if (check === true) {
+          document.getElementById("result").innerText = "This is an array";
+        } else {
+          document.getElementById("result").innerText = "This is an object";
+        }
+      }
+    </script>
+  </body>
+</html>
